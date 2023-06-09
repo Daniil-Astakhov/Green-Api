@@ -7,7 +7,7 @@
   flex-direction: column;
   color: #fff;
 }
-  
+
 .header {
   width: 100%;
   color: #fff;
@@ -39,7 +39,7 @@
   color: #fff;
   cursor: pointer;
 }
-  
+
 .form {
   position: absolute;
   bottom: 0;
@@ -53,12 +53,12 @@
   height: 62px;
   padding: 0 20px;
 }
-  
+
 .input {
   flex-grow: 1;
   height: 100%;
 }
-  
+
 .input input {
   position: absolute;
   padding: 9px 12px;
@@ -72,22 +72,21 @@
   background: #2a3942;
   font-size: 14px;
   font-weight: 500;
-  
 }
-  
+
 .button {
   text-align: center;
   cursor: pointer;
   color: #fff;
   z-index: 2;
 }
-  
+
 .button input {
   cursor: pointer;
-  
+
   color: #fff;
 }
-  
+
 .messages {
   position: relative;
   flex-grow: 1;
@@ -96,9 +95,9 @@
   font-size: 18px;
   background: rgb(35, 35, 35);
   padding: 32px 32px 32px 0;
-  background: url('../images/bg.png');
+  background: url("../images/bg.png");
 }
-  
+
 .emoji {
   width: 40px;
   cursor: pointer;
@@ -110,7 +109,7 @@
 .emoji img {
   vertical-align: middle;
 }
-  
+
 .emojies {
   position: absolute;
   left: 50%;
@@ -118,18 +117,18 @@
   bottom: 100%;
 }
 
-.containerChat{
+.containerChat {
   position: absolute;
   display: flex;
   flex-direction: column;
-  align-items:center;
+  align-items: center;
   top: 0;
   height: 100%;
   width: 15%;
   background: #111b21;
-  &:after{
+  &:after {
     position: absolute;
-    content: '';
+    content: "";
     width: 1px;
     height: 100vh;
     background: #ffffff37;
@@ -137,7 +136,7 @@
     bottom: 0;
   }
 }
-.containerUser{
+.containerUser {
   display: flex;
   position: relative;
   font-size: 15px;
@@ -152,18 +151,18 @@
   width: 90%;
   height: 60px;
   cursor: pointer;
-  transition: .3s all;
+  transition: 0.3s all;
   &:hover {
     background: #5a7a8e66;
   }
 }
-.containerInput input{
+.containerInput input {
   text-align: center;
   font-size: 1.5vw;
   color: #ffffff61;
 }
 
-.containerForm{
+.containerForm {
   display: flex;
   margin-top: 5px;
   justify-content: center;
@@ -174,23 +173,23 @@
   align-items: center;
   flex-direction: column;
 }
-.lastMessage{
+.lastMessage {
   position: absolute;
   bottom: -5px;
   left: 35px;
   color: #cdd4d8;
   font-size: 13px;
 }
-.containerSubBtn{
+.containerSubBtn {
   position: absolute;
   right: 1.5vh;
   width: 1.5vh;
   height: 1.5vh;
-  border-radius:50%;
+  border-radius: 50%;
   background: #202c33;
 }
 @media screen and (max-width: 998px) {
-  .containerSubBtn{
+  .containerSubBtn {
     display: none;
   }
   .emoji {
@@ -198,7 +197,7 @@
   }
 }
 @media screen and (max-width: 689px) {
-  .containerInput input{
+  .containerInput input {
     text-align: center;
     font-size: 2vw;
     color: #ffffff61;
