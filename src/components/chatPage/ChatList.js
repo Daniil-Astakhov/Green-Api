@@ -27,7 +27,7 @@ const ChatList = () => {
                     <input
                         type="text"
                         name="message"
-                        placeholder="7-900-00-00"
+                        placeholder="79123456780"
                         value={user}
                         onChange={handleChange}
                         autoComplete="off"
