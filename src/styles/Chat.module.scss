@@ -188,5 +188,19 @@
   height: 1.5vh;
   border-radius:50%;
   background: #202c33;
-  
+}
+@media screen and (max-width: 998px) {
+  .containerSubBtn{
+    display: none;
+  }
+  .emoji {
+    display: none;
+  }
+}
+@media screen and (max-width: 689px) {
+  .containerInput input{
+    text-align: center;
+    font-size: 2vw;
+    color: #ffffff61;
+  }
 }
