@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import EmojiPicker from "emoji-picker-react";
-import { useSendMessage } from "../../hooks/useSend";
-import { useGetMessage } from "../../hooks/useGet";
+import { sendMessage } from "../../services/sendMessage";
+import { getMessage } from "../../services/getMessage";
 import { useDispatch, useSelector } from "react-redux";
 import {
   messageChanged,
@@ -52,12 +52,12 @@ const Chat = () => {
     dispatch(userNamedChanged(body.senderData.chatName));
   };
 
-  const GetMessages = async () =>
-    useGetMessage(idInstance, apiTokenInstance, handleMessageReceived);
+  const getMessages = async () =>
+    getMessage(idInstance, apiTokenInstance, handleMessageReceived);
 
-  const SendMessage = async (e) => {
+  const sendMessages = async (e) => {
     e.preventDefault();
-    await useSendMessage(idInstance, apiTokenInstance, chatId[0], message);
+    await sendMessage(idInstance, apiTokenInstance, chatId[0], message);
     dispatch(messageChanged([idInstance, message, getDate()]));
     setMessage([]);
   };
@@ -69,7 +69,7 @@ const Chat = () => {
 
   useEffect(() => {
     const timer = setInterval(() => {
-      GetMessages();
+      getMessages();
     }, 8000);
     return () => {
       clearInterval(timer);
@@ -98,7 +98,7 @@ const Chat = () => {
         <Messages message={messages} name={nickName} />
       </div>
 
-      <form className={styles.form} onSubmit={SendMessage}>
+      <form className={styles.form} onSubmit={sendMessages}>
         <div className={styles.emoji}>
           <img src={icon} alt="icon" onClick={() => setIsOpen(!isOpen)} />
           {isOpen && (
@@ -121,7 +121,7 @@ const Chat = () => {
         <button
           className={styles.button}
           type="submit"
-          onClick={SendMessage}
+          onClick={sendMessages}
           value="Send a massage"
         >
           Send

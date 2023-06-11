@@ -1,4 +1,4 @@
-export const useGetMessage = (id, api, callback) => {
+export const getMessage = (id, api, callback) => {
   const deleteNotification = async (receiptId) => {
     const url = `https://api.green-api.com/waInstance${id}/deleteNotification/${api}/${receiptId}`;
     try {

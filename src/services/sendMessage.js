@@ -1,4 +1,4 @@
-export const useSendMessage = async (id, api, chatId, message) => {
+export const sendMessage = async (id, api, chatId, message) => {
   let url = `https://api.green-api.com/waInstance${id}/sendMessage/${api}`;
 
   let httpMethod = "POST";
